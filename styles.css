@@ -29,8 +29,8 @@ h1{
     width: 100vw;
     height: 100vh;
     background-image: 
-        radial-gradient(circle at 50% 30%, rgba(103,173,146,0.5), transparent 30%),
-        radial-gradient(circle at 80% 90%, rgba(103,173,146,0.5), transparent 30%);
+        radial-gradient(circle at 50% 30%, rgba(103,173,146,0.5), transparent 30%);
+        /* radial-gradient(circle at 80% 90%, rgba(103,173,146,0.5), transparent 30%); */
         /* radial-gradient(circle at 90% 80%, rgba(100, 100, 255, 0.4), transparent 50%); */
     filter: blur(100px);
     z-index: 0;
@@ -84,9 +84,9 @@ h1{
     grid-column: 1fr 1fr;
     grid-template-areas: 
     "trend genie";
-    justify-content: space-evenly;
-    margin-left: 30%;
-    margin-right: 30%;
+    justify-content: center ;
+    margin-left: 7%;
+    margin-right: 7%;
 
     
 }
@@ -104,12 +104,16 @@ h1{
     transition: background-color 0.3s;
     
 }
-.trend{
+#trend{
     grid-area: trend;
     width: 10rem;
+    margin-right: 2rem;
+    
 }
-.genie{
+#genie{
     grid-area: genie;
+    width: 10rem;
+    margin-left: 2rem;
 }
 .community{
     font-size: 3rem;
@@ -141,4 +145,23 @@ h1{
 }
 .card:hover img{
     filter: grayscale(0%);
+    
 }
+@media(
+    max-width:900px
+){
+    .blurred-dots {
+        position: absolute;
+        
+        width: 100vw;
+        height: 100vh;
+        background-image: 
+            radial-gradient(circle at center top, rgba(103,173,146,0.8), transparent 30%);
+            /* radial-gradient(circle at 80% 90%, rgba(103,173,146,0.5), transparent 30%); */
+            /* radial-gradient(circle at 90% 80%, rgba(100, 100, 255, 0.4), transparent 50%); */
+        filter: blur(100px);
+        z-index: 0;
+        pointer-events: none;
+    }
+}
+
