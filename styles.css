@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: black ;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+    justify-content: center;
+
+}
+h1{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 250;
+    letter-spacing: 0.01em;
+}
+.blurred-dots {
+    position: absolute;
+    
+    width: 100vw;
+    height: 100vh;
+    background-image: 
+        radial-gradient(circle at 50% 30%, rgba(103,173,146,0.5), transparent 30%),
+        radial-gradient(circle at 80% 90%, rgba(103,173,146,0.5), transparent 30%);
+        /* radial-gradient(circle at 90% 80%, rgba(100, 100, 255, 0.4), transparent 50%); */
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Optional: for glass effect */
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-btn {
+    background-color: rgba(103,173,146,255);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+.main{
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas: 
+    "trend genie";
+    justify-content: space-evenly;
+    margin-left: 30%;
+    margin-right: 30%;
+
+    
+}
+.but{
+    background-color: white;
+    color: black;
+    height: 40px;
+    width: 200px;
+    margin-top: 35%;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    
+}
+.trend{
+    grid-area: trend;
+    width: 10rem;
+}
+.genie{
+    grid-area: genie;
+}
+.community{
+    font-size: 3rem;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.card{
+    width: 300px;
+    justify-content: space-around;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+.card:hover{
+    scale: 1.03;
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.2s;
+    
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
